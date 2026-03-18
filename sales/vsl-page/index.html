@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Product Name] — Watch This First</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#fff7ed',
+              100: '#ffedd5',
+              500: '#f97316',
+              600: '#ea580c',
+              700: '#c2410c',
+              900: '#431407',
+            },
+            accent: '#22c55e',
+          },
+          fontFamily: {
+            display: ['Sora', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .display { font-family: 'Sora', sans-serif; }
+
+    /* Video player placeholder styling */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #000;
+    }
+    .video-wrapper iframe,
+    .video-wrapper video,
+    .video-wrapper .video-placeholder {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+    }
+
+    /* CTA reveal animation */
+    #cta-reveal {
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    #cta-reveal.hidden-cta {
+      opacity: 0;
+      transform: translateY(20px);
+      pointer-events: none;
+    }
+
+    /* Pulse animation for urgency dot */
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .pulse-dot { animation: pulse-dot 1.5s ease-in-out infinite; }
+  </style>
+</head>
+<body class="bg-gray-950 text-white antialiased">
+
+  <!-- ===== HEADER (minimal — keep focus on VSL) ===== -->
+  <header class="py-4 px-4 text-center border-b border-gray-800">
+    <p class="text-gray-400 text-sm">
+      <!-- Optional: logo or company name -->
+      [Company Name] &nbsp;·&nbsp; <span class="text-brand-500 font-semibold">Special Offer — Limited Time</span>
+    </p>
+  </header>
+
+  <!-- ===== PRE-HEADLINE + MAIN HEADLINE ===== -->
+  <section class="pt-14 pb-8 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <!-- Pre-headline -->
+      <p class="text-brand-500 font-semibold uppercase tracking-widest text-sm mb-4">
+        Attention: [Target Audience]
+      </p>
+
+      <!-- Main headline -->
+      <h1 class="font-display text-3xl md:text-5xl font-extrabold leading-tight text-white mb-5">
+        Discover the [Method/System] That [Specific Result] — Even If [Common Objection]
+      </h1>
+
+      <!-- Sub-headline -->
+      <p class="text-gray-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+        [One compelling sentence about what they're about to see in the video and why they need to watch right now.]
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== VIDEO SECTION ===== -->
+  <section class="pb-6 px-4">
+    <div class="max-w-3xl mx-auto">
+
+      <!-- Urgency bar above video -->
+      <div class="flex items-center justify-center gap-2 bg-red-900/50 border border-red-700 rounded-xl px-4 py-3 mb-4 text-sm text-red-300">
+        <span class="w-2 h-2 bg-red-500 rounded-full pulse-dot flex-shrink-0"></span>
+        <span><strong class="text-red-200">Watch the full video</strong> before this page comes down — this offer expires soon.</span>
+      </div>
+
+      <!-- Video Embed (16:9) -->
+      <div class="video-wrapper shadow-2xl">
+        <!--
+          OPTION A — YouTube embed:
+          <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?rel=0&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+
+          OPTION B — Vimeo embed:
+          <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID?badge=0&autopause=0" frameborder="0" allowfullscreen></iframe>
+
+          OPTION C — Self-hosted video:
+          <video controls poster="thumbnail.jpg">
+            <source src="video.mp4" type="video/mp4">
+          </video>
+        -->
+
+        <!-- Placeholder (remove when replacing with real video) -->
+        <div class="video-placeholder bg-gray-900 flex flex-col items-center justify-center text-gray-500 text-center p-8">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-gray-600 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+          <p class="text-lg font-semibold text-gray-400 mb-1">Video Goes Here</p>
+          <p class="text-sm text-gray-600">Replace this block with your YouTube, Vimeo, or self-hosted embed</p>
+        </div>
+      </div>
+
+      <!-- Below-video urgency text -->
+      <p class="text-center text-gray-400 text-sm mt-4 italic">
+        ⚠️ Watch the entire video — the most important part comes near the end.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== CTA REVEAL (initially hidden, revealed after delay) ===== -->
+  <section class="pb-12 px-4">
+    <div class="max-w-2xl mx-auto text-center">
+      <div id="cta-reveal" class="hidden-cta">
+        <p class="text-gray-500 text-xs uppercase tracking-widest font-medium mb-2">Offer Available Now</p>
+        <a
+          href="#order"
+          id="main-cta-btn"
+          class="inline-block bg-accent hover:bg-green-400 text-gray-900 font-bold text-xl px-10 py-5 rounded-2xl shadow-2xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-green-500/25"
+        >
+          Yes! I Want [Result] — Get Instant Access →
+        </a>
+        <p class="text-gray-500 text-sm mt-3">
+          🔒 Secure checkout &nbsp;·&nbsp; Instant delivery &nbsp;·&nbsp; [X]-day guarantee
+        </p>
+      </div>
+
+      <!-- Placeholder shown before CTA appears -->
+      <div id="cta-placeholder" class="py-6">
+        <div class="flex items-center justify-center gap-2 text-gray-500 text-sm">
+          <svg class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"/>
+          </svg>
+          Watch the video above to reveal the special offer…
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BULLET BENEFITS ===== -->
+  <section class="py-16 px-4 border-t border-gray-800">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-display text-2xl md:text-3xl font-bold text-white text-center mb-8">
+        When You Join [Product Name], You'll Discover…
+      </h2>
+      <ul class="space-y-4">
+        <li class="flex items-start gap-4">
+          <span class="text-accent text-xl mt-0.5">✓</span>
+          <p class="text-gray-300 leading-relaxed"><strong class="text-white">How to [specific outcome]</strong> — without [common objection or pain]</p>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="text-accent text-xl mt-0.5">✓</span>
+          <p class="text-gray-300 leading-relaxed"><strong class="text-white">The [X]-step framework</strong> that [result] even if you're starting from scratch</p>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="text-accent text-xl mt-0.5">✓</span>
+          <p class="text-gray-300 leading-relaxed"><strong class="text-white">Why [common approach] fails</strong> — and the simple switch that changes everything</p>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="text-accent text-xl mt-0.5">✓</span>
+          <p class="text-gray-300 leading-relaxed"><strong class="text-white">The exact [template/script/system]</strong> we use to [specific result] in [timeframe]</p>
+        </li>
+        <li class="flex items-start gap-4">
+          <span class="text-accent text-xl mt-0.5">✓</span>
+          <p class="text-gray-300 leading-relaxed"><strong class="text-white">BONUS: [Bonus Name]</strong> — [one-line description of bonus value]</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== ORDER BOX ===== -->
+  <section id="order" class="py-20 px-4 bg-gray-900">
+    <div class="max-w-xl mx-auto">
+
+      <div class="bg-gray-800 border border-gray-700 rounded-2xl p-8 shadow-2xl">
+        <p class="text-brand-500 font-semibold uppercase tracking-widest text-xs text-center mb-2">Special Offer — Today Only</p>
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-white text-center mb-6">
+          Get Instant Access to [Product Name]
+        </h2>
+
+        <!-- What's included -->
+        <div class="bg-gray-750 border border-gray-600 rounded-xl p-5 mb-6 space-y-2">
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-gray-300 flex items-center gap-2">
+              <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              [Core Product / Course Name]
+            </span>
+            <span class="text-gray-500 line-through">$[Value]</span>
+          </div>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-gray-300 flex items-center gap-2">
+              <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              [Bonus #1 Name]
+            </span>
+            <span class="text-gray-500 line-through">$[Value]</span>
+          </div>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-gray-300 flex items-center gap-2">
+              <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+              [Bonus #2 Name]
+            </span>
+            <span class="text-gray-500 line-through">$[Value]</span>
+          </div>
+          <div class="border-t border-gray-600 pt-2 mt-2 flex items-center justify-between font-bold">
+            <span class="text-white">Total Value</span>
+            <span class="text-gray-400 line-through">$[Total Value]</span>
+          </div>
+        </div>
+
+        <!-- Price -->
+        <div class="text-center mb-6">
+          <p class="text-gray-400 text-sm mb-1">Your Price Today</p>
+          <div class="flex items-center justify-center gap-3">
+            <span class="text-5xl font-display font-extrabold text-white">$[Price]</span>
+          </div>
+          <p class="text-accent text-sm font-semibold mt-1">You save $[Savings]!</p>
+        </div>
+
+        <!-- CTA Button -->
+        <a
+          href="#"
+          class="block text-center bg-accent hover:bg-green-400 text-gray-900 font-bold text-xl py-5 rounded-2xl shadow-xl transition-all duration-200 hover:-translate-y-0.5 mb-4"
+        >
+          Yes! Get Instant Access →
+        </a>
+
+        <!-- Trust signals -->
+        <div class="flex flex-wrap justify-center gap-4 text-xs text-gray-500">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            Secure Checkout
+          </span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            Instant Access
+          </span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            [X]-Day Guarantee
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GUARANTEE ===== -->
+  <section class="py-16 px-4 bg-gray-950 border-t border-gray-800">
+    <div class="max-w-2xl mx-auto text-center">
+      <div class="inline-flex flex-col items-center">
+        <div class="w-20 h-20 bg-accent rounded-full flex items-center justify-center mb-5 shadow-lg shadow-green-500/20">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <h3 class="font-display text-2xl font-bold text-white mb-3">[X]-Day Money-Back Guarantee</h3>
+        <p class="text-gray-400 leading-relaxed max-w-lg">
+          I'm so confident you'll love [Product Name] that I'm backing it with a full [X]-day, no-questions-asked money-back guarantee. If you don't [see results / feel satisfied] for any reason, just send one email and you'll get a complete refund. You have nothing to lose.
+        </p>
+        <p class="mt-4 font-semibold text-white">— [Founder Name], [Title]</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-black text-gray-500 text-sm py-8 px-4 text-center border-t border-gray-800">
+    <p>© 2026 [Company Name]. All rights reserved.</p>
+    <p class="mt-1">
+      <a href="#" class="hover:text-white underline mx-2">Privacy Policy</a>
+      <a href="#" class="hover:text-white underline mx-2">Terms of Service</a>
+      <a href="#" class="hover:text-white underline mx-2">Earnings Disclaimer</a>
+      <a href="#" class="hover:text-white underline mx-2">Contact</a>
+    </p>
+    <p class="mt-4 text-xs text-gray-700 max-w-2xl mx-auto">
+      Results shown are not typical. Individual results vary. This page contains marketing materials and does not constitute professional advice.
+    </p>
+  </footer>
+
+  <!-- ===== CTA REVEAL SCRIPT ===== -->
+  <script>
+    // SET DELAY IN MILLISECONDS before CTA appears (e.g., 30000 = 30 seconds)
+    // Set to 0 to show CTA immediately. Set to a video timestamp (ms) to sync with video.
+    const CTA_DELAY_MS = 30000;
+
+    function revealCTA() {
+      const cta = document.getElementById('cta-reveal');
+      const placeholder = document.getElementById('cta-placeholder');
+      if (cta) {
+        cta.classList.remove('hidden-cta');
+        cta.style.opacity = '';
+        cta.style.transform = '';
+        cta.style.pointerEvents = '';
+      }
+      if (placeholder) {
+        placeholder.style.display = 'none';
+      }
+    }
+
+    // Auto-reveal after delay
+    setTimeout(revealCTA, CTA_DELAY_MS);
+
+    // Also reveal on scroll to order section (as fallback)
+    const orderSection = document.getElementById('order');
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        revealCTA();
+        observer.disconnect();
+      }
+    }, { threshold: 0.2 });
+    if (orderSection) observer.observe(orderSection);
+  </script>
+
+</body>
+</html>

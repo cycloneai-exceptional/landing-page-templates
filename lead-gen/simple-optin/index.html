@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Guide — Simple Opt-in</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              900: '#1e3a5f',
+            },
+            accent: '#f59e0b',
+          },
+          fontFamily: {
+            display: ['Sora', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, .display { font-family: 'Sora', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- ===== HERO ===== -->
+  <section class="bg-brand-900 text-white py-20 px-4">
+    <div class="max-w-2xl mx-auto text-center">
+      <!-- Eyebrow -->
+      <p class="text-accent font-semibold uppercase tracking-widest text-sm mb-4">Free Instant Access</p>
+
+      <!-- Headline -->
+      <h1 class="font-display text-4xl md:text-5xl font-extrabold leading-tight mb-5">
+        [Bold Headline That Promises a Clear Result]
+      </h1>
+
+      <!-- Sub-headline -->
+      <p class="text-blue-200 text-lg md:text-xl mb-10 leading-relaxed">
+        [Supporting sentence that calls out the target audience and the specific transformation they'll get — in plain English.]
+      </p>
+
+      <!-- Opt-in Form -->
+      <form action="#" method="post" class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl text-left max-w-md mx-auto">
+        <p class="text-gray-700 font-semibold text-center mb-5 text-lg">Get Instant Free Access</p>
+
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700 mb-1" for="first-name">First Name</label>
+          <input
+            id="first-name" name="first_name" type="text" placeholder="Jane"
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-500 transition"
+            required
+          />
+        </div>
+
+        <div class="mb-5">
+          <label class="block text-sm font-medium text-gray-700 mb-1" for="email">Email Address</label>
+          <input
+            id="email" name="email" type="email" placeholder="jane@example.com"
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-500 transition"
+            required
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-accent hover:bg-yellow-500 text-gray-900 font-bold text-lg py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
+        >
+          Yes! Send Me Free Access →
+        </button>
+
+        <p class="text-center text-xs text-gray-400 mt-4">
+          🔒 100% free. No spam, ever. Unsubscribe anytime.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== SOCIAL PROOF STRIP ===== -->
+  <section class="bg-gray-50 border-y border-gray-200 py-10 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-sm text-gray-500 uppercase tracking-widest font-medium mb-6">Trusted by professionals at</p>
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-50 grayscale">
+        <!-- Replace these with real logo images: <img src="logo.svg" alt="Company" class="h-8" /> -->
+        <div class="h-8 w-24 bg-gray-400 rounded"></div>
+        <div class="h-8 w-28 bg-gray-400 rounded"></div>
+        <div class="h-8 w-20 bg-gray-400 rounded"></div>
+        <div class="h-8 w-32 bg-gray-400 rounded"></div>
+        <div class="h-8 w-24 bg-gray-400 rounded"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFITS ===== -->
+  <section class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-center text-gray-900 mb-3">
+        Here's Exactly What You'll Discover
+      </h2>
+      <p class="text-center text-gray-500 text-lg mb-14">
+        [One line reinforcing value — e.g. "Everything in one free guide, no fluff."]
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Benefit 1 -->
+        <div class="flex flex-col items-center text-center bg-brand-50 rounded-2xl p-8">
+          <div class="w-14 h-14 bg-brand-500 rounded-xl flex items-center justify-center mb-5">
+            <!-- Heroicon: lightning-bolt -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-2">Benefit Headline One</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Describe the specific result or transformation this benefit delivers. Keep it concrete and outcome-focused.</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="flex flex-col items-center text-center bg-brand-50 rounded-2xl p-8">
+          <div class="w-14 h-14 bg-brand-500 rounded-xl flex items-center justify-center mb-5">
+            <!-- Heroicon: chart-bar -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-2">Benefit Headline Two</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Describe the specific result or transformation this benefit delivers. Keep it concrete and outcome-focused.</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="flex flex-col items-center text-center bg-brand-50 rounded-2xl p-8">
+          <div class="w-14 h-14 bg-brand-500 rounded-xl flex items-center justify-center mb-5">
+            <!-- Heroicon: shield-check -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-2">Benefit Headline Three</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Describe the specific result or transformation this benefit delivers. Keep it concrete and outcome-focused.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIAL ===== -->
+  <section class="bg-gray-50 py-16 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <blockquote class="text-2xl md:text-3xl font-display font-bold text-gray-800 leading-snug mb-6">
+        "[Insert a strong one-sentence testimonial that includes a specific result — numbers work great here.]"
+      </blockquote>
+      <div class="flex items-center justify-center gap-3">
+        <div class="w-12 h-12 rounded-full bg-gray-300"></div><!-- Replace with <img src="avatar.jpg"> -->
+        <div class="text-left">
+          <p class="font-semibold text-gray-900">Full Name</p>
+          <p class="text-sm text-gray-500">Title, Company</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER CTA ===== -->
+  <section class="bg-brand-900 text-white py-16 px-4">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="font-display text-3xl md:text-4xl font-extrabold mb-4">
+        Ready to [Get the Result]?
+      </h2>
+      <p class="text-blue-200 text-lg mb-8">
+        Join [X,000]+ people who already have access. It's completely free.
+      </p>
+
+      <form action="#" method="post" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input
+          name="email" type="email" placeholder="Your email address"
+          class="flex-1 px-4 py-3 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-accent"
+          required
+        />
+        <button
+          type="submit"
+          class="bg-accent hover:bg-yellow-500 text-gray-900 font-bold px-6 py-3 rounded-xl transition-all duration-200 whitespace-nowrap"
+        >
+          Get Free Access →
+        </button>
+      </form>
+
+      <p class="text-xs text-blue-300 mt-5">
+        By signing up, you agree to our <a href="#" class="underline hover:text-white">Privacy Policy</a>. We never sell your data. Unsubscribe anytime.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-gray-900 text-gray-400 text-sm py-6 px-4 text-center">
+    <p>© 2026 [Company Name]. All rights reserved.</p>
+    <p class="mt-1">
+      <a href="#" class="hover:text-white underline mx-2">Privacy Policy</a>
+      <a href="#" class="hover:text-white underline mx-2">Terms of Service</a>
+      <a href="#" class="hover:text-white underline mx-2">Contact</a>
+    </p>
+  </footer>
+
+</body>
+</html>

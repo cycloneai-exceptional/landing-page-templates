@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Webinar — Register Now</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#f0fdf4',
+              100: '#dcfce7',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              900: '#14532d',
+            },
+            accent: '#f59e0b',
+          },
+          fontFamily: {
+            display: ['Sora', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, .display { font-family: 'Sora', sans-serif; }
+
+    /* Countdown digits */
+    .countdown-box {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 12px;
+      padding: 12px 16px;
+      min-width: 70px;
+      text-align: center;
+    }
+    .countdown-num {
+      font-family: 'Sora', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .countdown-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 4px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- ===== HERO ===== -->
+  <section class="bg-brand-900 text-white py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+
+      <!-- Eyebrow -->
+      <div class="inline-flex items-center gap-2 bg-brand-700 text-green-200 text-sm font-semibold px-4 py-2 rounded-full mb-6">
+        <span class="w-2 h-2 bg-accent rounded-full animate-pulse"></span>
+        FREE Live Webinar — Limited Spots Available
+      </div>
+
+      <!-- Headline -->
+      <h1 class="font-display text-4xl md:text-5xl font-extrabold leading-tight mb-5">
+        [How to Achieve Specific Result] Even If [Common Objection]
+      </h1>
+
+      <!-- Sub-headline -->
+      <p class="text-green-200 text-lg md:text-xl mb-8 leading-relaxed max-w-2xl mx-auto">
+        Join [Host Name] for a free live training where you'll discover [main promise] — in [timeframe].
+      </p>
+
+      <!-- Date / Time Badge -->
+      <div class="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-6 bg-white/10 border border-white/20 rounded-2xl px-6 py-4 mb-8 text-sm">
+        <div class="flex items-center gap-2">
+          <!-- calendar icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          <span class="font-semibold">[Day], [Month DD, YYYY]</span>
+        </div>
+        <div class="hidden sm:block w-px h-5 bg-white/30"></div>
+        <div class="flex items-center gap-2">
+          <!-- clock icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <span class="font-semibold">[Time] [Timezone]</span>
+        </div>
+      </div>
+
+      <!-- Countdown Timer -->
+      <p class="text-green-300 text-sm uppercase tracking-widest font-medium mb-4">Starts In</p>
+      <div id="countdown" class="flex justify-center gap-3 mb-10">
+        <div class="countdown-box">
+          <div class="countdown-num" id="cd-days">00</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-num" id="cd-hours">00</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-num" id="cd-mins">00</div>
+          <div class="countdown-label">Mins</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-num" id="cd-secs">00</div>
+          <div class="countdown-label">Secs</div>
+        </div>
+      </div>
+
+      <!-- Registration Form -->
+      <form action="#" method="post" class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl text-left max-w-md mx-auto">
+        <p class="text-gray-800 font-bold text-xl text-center mb-1">Claim Your Free Spot</p>
+        <p class="text-gray-500 text-sm text-center mb-5">Only [X] seats remaining — reserve yours now.</p>
+
+        <div class="mb-4">
+          <label class="block text-sm font-medium text-gray-700 mb-1" for="name">Full Name</label>
+          <input
+            id="name" name="full_name" type="text" placeholder="Jane Smith"
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-500 transition"
+            required
+          />
+        </div>
+
+        <div class="mb-5">
+          <label class="block text-sm font-medium text-gray-700 mb-1" for="email">Email Address</label>
+          <input
+            id="email" name="email" type="email" placeholder="jane@example.com"
+            class="w-full border border-gray-300 rounded-lg px-4 py-3 text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-500 transition"
+            required
+          />
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-accent hover:bg-yellow-500 text-gray-900 font-bold text-lg py-4 rounded-xl transition-all duration-200 shadow-lg hover:shadow-xl"
+        >
+          Reserve My Free Spot →
+        </button>
+
+        <p class="text-center text-xs text-gray-400 mt-4">
+          🔒 Your info is secure. We'll send you the webinar link by email.
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== WHAT YOU'LL LEARN ===== -->
+  <section class="py-20 px-4">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-brand-600 font-semibold uppercase tracking-widest text-sm text-center mb-3">On This Free Training</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+        Here's Exactly What You'll Learn
+      </h2>
+
+      <div class="space-y-5">
+        <!-- Learning bullet 1 -->
+        <div class="flex items-start gap-4 bg-gray-50 rounded-xl p-5">
+          <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 mb-1">The [Method/Strategy] That [Result]</p>
+            <p class="text-gray-600 text-sm leading-relaxed">Short description of what they'll learn and why it matters. Be specific — vague promises don't convert.</p>
+          </div>
+        </div>
+
+        <!-- Learning bullet 2 -->
+        <div class="flex items-start gap-4 bg-gray-50 rounded-xl p-5">
+          <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 mb-1">Why Most People Fail at [Topic] — And How to Avoid It</p>
+            <p class="text-gray-600 text-sm leading-relaxed">Short description of the insight they'll gain. Tie to a common pain point your audience experiences.</p>
+          </div>
+        </div>
+
+        <!-- Learning bullet 3 -->
+        <div class="flex items-start gap-4 bg-gray-50 rounded-xl p-5">
+          <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 mb-1">The Step-by-Step [Framework Name] to [Outcome]</p>
+            <p class="text-gray-600 text-sm leading-relaxed">Short description. Make this one sound like a tangible deliverable they'll walk away with.</p>
+          </div>
+        </div>
+
+        <!-- Learning bullet 4 -->
+        <div class="flex items-start gap-4 bg-gray-50 rounded-xl p-5">
+          <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <div>
+            <p class="font-semibold text-gray-900 mb-1">BONUS: Live Q&A — Get Your Questions Answered</p>
+            <p class="text-gray-600 text-sm leading-relaxed">Stay for the live Q&A and get direct feedback on your specific situation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOST BIO ===== -->
+  <section class="bg-gray-50 py-20 px-4 border-t border-gray-200">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-brand-600 font-semibold uppercase tracking-widest text-sm text-center mb-8">Meet Your Host</p>
+      <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+        <!-- Photo placeholder -->
+        <div class="w-36 h-36 rounded-2xl bg-gray-300 flex-shrink-0 flex items-center justify-center text-gray-400 text-xs text-center leading-tight p-2">
+          <!-- Replace with: <img src="host-photo.jpg" class="w-36 h-36 rounded-2xl object-cover" alt="Host Name"> -->
+          Host Photo<br/>(Replace Me)
+        </div>
+        <div>
+          <h3 class="font-display text-2xl font-bold text-gray-900 mb-1">[Host Full Name]</h3>
+          <p class="text-brand-600 font-medium mb-4">[Title / Credential / Authority Marker]</p>
+          <p class="text-gray-600 leading-relaxed mb-3">
+            [2–3 sentences establishing credibility. Include a specific result, number, or notable achievement. E.g.: "Jane has helped 3,400+ entrepreneurs generate their first $10k online using her signature system."]
+          </p>
+          <p class="text-gray-600 leading-relaxed">
+            [1–2 more sentences about their story or why they're qualified to teach this topic. Humanize them a little — audiences connect with real people.]
+          </p>
+          <!-- Social proof badges -->
+          <div class="flex flex-wrap gap-3 mt-5">
+            <span class="bg-brand-100 text-brand-700 text-xs font-semibold px-3 py-1.5 rounded-full">📺 Featured on [Media]</span>
+            <span class="bg-brand-100 text-brand-700 text-xs font-semibold px-3 py-1.5 rounded-full">👥 [X,000]+ Students</span>
+            <span class="bg-brand-100 text-brand-700 text-xs font-semibold px-3 py-1.5 rounded-full">⭐ [X.X] Avg Rating</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER CTA / URGENCY ===== -->
+  <section class="bg-brand-900 text-white py-16 px-4">
+    <div class="max-w-xl mx-auto text-center">
+      <!-- Urgency note -->
+      <div class="inline-flex items-center gap-2 bg-red-600 text-white text-sm font-bold px-4 py-2 rounded-full mb-6">
+        ⚠️ Only [X] Spots Remaining — This Webinar Fills Fast
+      </div>
+
+      <h2 class="font-display text-3xl md:text-4xl font-extrabold mb-4">
+        Don't Miss This Free Training
+      </h2>
+      <p class="text-green-200 text-lg mb-8">
+        Register now — the replay will <span class="font-bold text-white">not</span> be made available.
+      </p>
+
+      <form action="#" method="post" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input
+          name="email" type="email" placeholder="Your email address"
+          class="flex-1 px-4 py-3 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-accent"
+          required
+        />
+        <button
+          type="submit"
+          class="bg-accent hover:bg-yellow-500 text-gray-900 font-bold px-6 py-3 rounded-xl transition-all duration-200 whitespace-nowrap"
+        >
+          Reserve My Spot →
+        </button>
+      </form>
+
+      <p class="text-xs text-green-300 mt-5">
+        By registering, you agree to our <a href="#" class="underline hover:text-white">Privacy Policy</a>. We'll only contact you about this webinar.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-gray-900 text-gray-400 text-sm py-6 px-4 text-center">
+    <p>© 2026 [Company Name]. All rights reserved.</p>
+    <p class="mt-1">
+      <a href="#" class="hover:text-white underline mx-2">Privacy Policy</a>
+      <a href="#" class="hover:text-white underline mx-2">Terms of Service</a>
+      <a href="#" class="hover:text-white underline mx-2">Contact</a>
+    </p>
+    <p class="mt-3 text-xs text-gray-600 max-w-xl mx-auto">
+      This webinar is for educational purposes. Results shown are not typical. Individual results will vary based on effort, experience, and market conditions.
+    </p>
+  </footer>
+
+  <!-- ===== COUNTDOWN TIMER SCRIPT ===== -->
+  <script>
+    // SET YOUR WEBINAR DATE HERE (YYYY, MM-1, DD, HH, MM, SS)
+    // Example: April 25, 2026 at 7:00 PM
+    const webinarDate = new Date(2026, 3, 25, 19, 0, 0);
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = webinarDate - now;
+
+      if (diff <= 0) {
+        document.getElementById('countdown').innerHTML = '<p class="text-accent font-bold text-xl">This webinar is live now!</p>';
+        return;
+      }
+
+      const days  = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins  = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs  = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-days').textContent  = String(days).padStart(2, '0');
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('cd-mins').textContent  = String(mins).padStart(2, '0');
+      document.getElementById('cd-secs').textContent  = String(secs).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+
+</body>
+</html>

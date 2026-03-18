@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[Product Name] — Sales Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50:  '#fdf4ff',
+              100: '#fae8ff',
+              500: '#a855f7',
+              600: '#9333ea',
+              700: '#7e22ce',
+              900: '#3b0764',
+            },
+            accent: '#f59e0b',
+          },
+          fontFamily: {
+            display: ['Sora', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, .display { font-family: 'Sora', sans-serif; }
+
+    /* FAQ accordion */
+    .faq-answer { display: none; }
+    .faq-item.open .faq-answer { display: block; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform 0.2s ease; }
+
+    /* Highlighted text */
+    .highlight { background: linear-gradient(120deg, #fde047 0%, #f59e0b 100%); padding: 0 4px; border-radius: 4px; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- ===== HERO ===== -->
+  <section class="bg-brand-900 text-white py-24 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-brand-300 font-semibold uppercase tracking-widest text-sm mb-5">Introducing [Product Name]</p>
+      <h1 class="font-display text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+        Are You Tired of [Main Pain Point] Without Ever Seeing [Desired Result]?
+      </h1>
+      <p class="text-purple-200 text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
+        Discover the [Method/System] that helps [target audience] finally [achieve result] — in [timeframe] — without [objection].
+      </p>
+      <a href="#pricing" class="inline-block bg-accent hover:bg-yellow-500 text-gray-900 font-bold text-xl px-10 py-5 rounded-2xl shadow-xl transition-all duration-200 hover:shadow-2xl hover:-translate-y-0.5">
+        Yes, I Want [Result] →
+      </a>
+      <p class="text-purple-300 text-sm mt-4">Join [X,000]+ [customers] who've already [achieved result]</p>
+    </div>
+  </section>
+
+  <!-- ===== PROBLEM AGITATION ===== -->
+  <section class="py-20 px-4 bg-gray-50">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+        If Any of This Sounds Familiar, Keep Reading…
+      </h2>
+      <div class="space-y-4 text-gray-700 text-lg leading-relaxed">
+        <p class="flex items-start gap-3">
+          <span class="text-red-500 text-xl mt-0.5">✗</span>
+          You've tried [common solution] but still struggle with [specific problem].
+        </p>
+        <p class="flex items-start gap-3">
+          <span class="text-red-500 text-xl mt-0.5">✗</span>
+          You're [burning time/money] on [failed approach] with nothing to show for it.
+        </p>
+        <p class="flex items-start gap-3">
+          <span class="text-red-500 text-xl mt-0.5">✗</span>
+          Everyone else seems to [have success] but you can't figure out why it's not working for you.
+        </p>
+        <p class="flex items-start gap-3">
+          <span class="text-red-500 text-xl mt-0.5">✗</span>
+          You feel [frustrated/stuck/overwhelmed] and wonder if [desired result] is even possible for you.
+        </p>
+      </div>
+      <p class="mt-10 text-xl font-semibold text-gray-900 border-l-4 border-brand-500 pl-5">
+        It's not your fault. The problem is [root cause] — and there's a better way.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== SOLUTION INTRO ===== -->
+  <section class="py-20 px-4 bg-white">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-brand-600 font-semibold uppercase tracking-widest text-sm mb-3">The Solution</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        Introducing <span class="text-brand-600">[Product Name]</span>
+      </h2>
+      <p class="text-gray-600 text-xl leading-relaxed mb-8">
+        [Product Name] is [one-sentence description of what it is and who it's for]. Unlike [alternative], it [key differentiator] so you can [outcome] without [objection].
+      </p>
+      <!-- Product image placeholder -->
+      <div class="bg-gray-100 rounded-2xl w-full aspect-video flex items-center justify-center text-gray-400 text-sm border border-gray-200 mb-8">
+        <!-- Replace with: <img src="product-mockup.png" class="rounded-2xl" alt="[Product Name]"> -->
+        Product Image / Mockup (Replace Me)
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES / BENEFITS GRID ===== -->
+  <section class="py-20 px-4 bg-brand-50">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-brand-600 font-semibold uppercase tracking-widest text-sm text-center mb-3">What's Inside</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+        Everything You Need to [Achieve Result]
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Feature Card (repeat as needed) -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-purple-100">
+          <div class="w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-bold mb-2">Feature / Module Name</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Describe what this feature does and — more importantly — the benefit it gives the user.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-purple-100">
+          <div class="w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-bold mb-2">Feature / Module Name</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Describe what this feature does and — more importantly — the benefit it gives the user.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-purple-100">
+          <div class="w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-bold mb-2">Feature / Module Name</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Describe what this feature does and — more importantly — the benefit it gives the user.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-purple-100">
+          <div class="w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-bold mb-2">Feature / Module Name</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Describe what this feature does and — more importantly — the benefit it gives the user.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-purple-100">
+          <div class="w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-bold mb-2">Feature / Module Name</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Describe what this feature does and — more importantly — the benefit it gives the user.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-purple-100">
+          <div class="w-12 h-12 bg-brand-500 rounded-xl flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-bold mb-2">Feature / Module Name</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Describe what this feature does and — more importantly — the benefit it gives the user.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="py-20 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-brand-600 font-semibold uppercase tracking-widest text-sm text-center mb-3">Real Results</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+        Here's What Our Customers Say
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Testimonial Card -->
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 flex flex-col">
+          <div class="flex mb-4">
+            <span class="text-accent text-xl">★★★★★</span>
+          </div>
+          <blockquote class="text-gray-700 text-sm leading-relaxed flex-1 mb-5">
+            "[Insert a specific, results-driven testimonial. Mention a number or measurable outcome. The more specific, the more credible.]"
+          </blockquote>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-200">
+            <div class="w-10 h-10 rounded-full bg-gray-300 flex-shrink-0"></div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">Customer Name</p>
+              <p class="text-gray-500 text-xs">Title / Location</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 2 -->
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 flex flex-col">
+          <div class="flex mb-4">
+            <span class="text-accent text-xl">★★★★★</span>
+          </div>
+          <blockquote class="text-gray-700 text-sm leading-relaxed flex-1 mb-5">
+            "[Another strong testimonial with a specific outcome. Try to address a different pain point or benefit than the first testimonial.]"
+          </blockquote>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-200">
+            <div class="w-10 h-10 rounded-full bg-gray-300 flex-shrink-0"></div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">Customer Name</p>
+              <p class="text-gray-500 text-xs">Title / Location</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Card 3 -->
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 flex flex-col">
+          <div class="flex mb-4">
+            <span class="text-accent text-xl">★★★★★</span>
+          </div>
+          <blockquote class="text-gray-700 text-sm leading-relaxed flex-1 mb-5">
+            "[A third testimonial focusing on ease of use or speed of results — addressing the 'is it worth it?' objection.]"
+          </blockquote>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-200">
+            <div class="w-10 h-10 rounded-full bg-gray-300 flex-shrink-0"></div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">Customer Name</p>
+              <p class="text-gray-500 text-xs">Title / Location</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section id="pricing" class="py-20 px-4 bg-brand-50">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-brand-600 font-semibold uppercase tracking-widest text-sm text-center mb-3">Pricing</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+        Choose Your Plan
+      </h2>
+      <p class="text-center text-gray-500 text-lg mb-12">No hidden fees. Cancel anytime.</p>
+
+      <div class="grid md:grid-cols-3 gap-6 items-start">
+
+        <!-- Tier 1 — Starter -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
+          <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">Starter</p>
+          <div class="mb-6">
+            <span class="text-4xl font-display font-extrabold text-gray-900">$97</span>
+            <span class="text-gray-500 text-sm ml-1">one-time</span>
+          </div>
+          <ul class="space-y-3 mb-8 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-brand-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Feature / Access #1</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-brand-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Feature / Access #2</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-brand-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Feature / Access #3</li>
+            <li class="flex items-center gap-2 opacity-40"><svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> Premium Feature</li>
+            <li class="flex items-center gap-2 opacity-40"><svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> 1-on-1 Support</li>
+          </ul>
+          <a href="#" class="block text-center border-2 border-brand-500 text-brand-600 font-bold py-3 rounded-xl hover:bg-brand-50 transition">Get Started</a>
+        </div>
+
+        <!-- Tier 2 — Pro (highlighted) -->
+        <div class="bg-brand-900 rounded-2xl p-8 border-2 border-brand-500 shadow-2xl relative">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-gray-900 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wide">Most Popular</div>
+          <p class="text-sm font-semibold text-brand-300 uppercase tracking-wider mb-2">Pro</p>
+          <div class="mb-6">
+            <span class="text-4xl font-display font-extrabold text-white">$197</span>
+            <span class="text-brand-300 text-sm ml-1">one-time</span>
+          </div>
+          <ul class="space-y-3 mb-8 text-sm text-purple-200">
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Everything in Starter</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Premium Feature #1</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Premium Feature #2</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Priority Email Support</li>
+            <li class="flex items-center gap-2 opacity-40"><svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg> 1-on-1 Coaching Calls</li>
+          </ul>
+          <a href="#" class="block text-center bg-accent hover:bg-yellow-500 text-gray-900 font-bold py-3.5 rounded-xl transition shadow-lg">Get Pro Access →</a>
+        </div>
+
+        <!-- Tier 3 — VIP -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
+          <p class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-2">VIP</p>
+          <div class="mb-6">
+            <span class="text-4xl font-display font-extrabold text-gray-900">$497</span>
+            <span class="text-gray-500 text-sm ml-1">one-time</span>
+          </div>
+          <ul class="space-y-3 mb-8 text-sm text-gray-600">
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-brand-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Everything in Pro</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-brand-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> 3× 1-on-1 Coaching Calls</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-brand-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Done-With-You Setup</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-brand-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Lifetime Updates</li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-brand-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Private Community Access</li>
+          </ul>
+          <a href="#" class="block text-center border-2 border-brand-500 text-brand-600 font-bold py-3 rounded-xl hover:bg-brand-50 transition">Apply for VIP</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="py-20 px-4 bg-white">
+    <div class="max-w-2xl mx-auto">
+      <p class="text-brand-600 font-semibold uppercase tracking-widest text-sm text-center mb-3">FAQ</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+        Common Questions
+      </h2>
+      <div class="space-y-3" id="faq-list">
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-gray-900 hover:bg-gray-50 transition">
+            <span>Who is this for?</span>
+            <span class="faq-icon text-brand-500 text-2xl font-light ml-4 flex-shrink-0">+</span>
+          </button>
+          <div class="faq-answer px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            [Describe exactly who the product is a great fit for. Be specific. This also serves as a qualifier — tell them who it's NOT for if relevant.]
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-gray-900 hover:bg-gray-50 transition">
+            <span>How quickly will I see results?</span>
+            <span class="faq-icon text-brand-500 text-2xl font-light ml-4 flex-shrink-0">+</span>
+          </button>
+          <div class="faq-answer px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            [Set realistic expectations while still being encouraging. Mention typical timelines and what's required on their end.]
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-gray-900 hover:bg-gray-50 transition">
+            <span>What if I'm a complete beginner?</span>
+            <span class="faq-icon text-brand-500 text-2xl font-light ml-4 flex-shrink-0">+</span>
+          </button>
+          <div class="faq-answer px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            [Address the experience objection. Explain why beginners succeed with your product and what level of prerequisite knowledge is needed.]
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-gray-900 hover:bg-gray-50 transition">
+            <span>Is there a refund policy?</span>
+            <span class="faq-icon text-brand-500 text-2xl font-light ml-4 flex-shrink-0">+</span>
+          </button>
+          <div class="faq-answer px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            Yes! We offer a [X]-day money-back guarantee. If you're not satisfied for any reason, just email us at [support@yourdomain.com] and we'll issue a full refund — no questions asked.
+          </div>
+        </div>
+
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+          <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-gray-900 hover:bg-gray-50 transition">
+            <span>How do I access [Product Name] after purchase?</span>
+            <span class="faq-icon text-brand-500 text-2xl font-light ml-4 flex-shrink-0">+</span>
+          </button>
+          <div class="faq-answer px-6 pb-5 text-gray-600 text-sm leading-relaxed">
+            [Explain delivery method — email, member portal, app, etc. Set expectations for how quickly they'll receive access after purchasing.]
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FINAL CTA + GUARANTEE ===== -->
+  <section class="py-20 px-4 bg-brand-50">
+    <div class="max-w-3xl mx-auto text-center">
+
+      <!-- Guarantee Badge -->
+      <div class="inline-flex flex-col items-center bg-white border-2 border-brand-500 rounded-2xl px-10 py-8 mb-12 shadow-md">
+        <div class="w-16 h-16 bg-brand-500 rounded-full flex items-center justify-center mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <h3 class="font-display text-2xl font-bold text-gray-900 mb-2">[X]-Day Money-Back Guarantee</h3>
+        <p class="text-gray-600 text-sm max-w-md leading-relaxed">
+          Try [Product Name] completely risk-free. If you're not [satisfied / seeing results / 100% happy] within [X] days, email us for a full refund. No questions, no hassle.
+        </p>
+      </div>
+
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Ready to [Achieve the Result]?
+      </h2>
+      <p class="text-gray-600 text-lg mb-8">
+        Join [X,000]+ [customers] who've already [achieved result]. Start today, risk-free.
+      </p>
+      <a href="#pricing" class="inline-block bg-brand-600 hover:bg-brand-700 text-white font-bold text-xl px-10 py-5 rounded-2xl shadow-xl transition-all duration-200 hover:-translate-y-0.5">
+        Get Instant Access →
+      </a>
+      <p class="text-gray-400 text-sm mt-4">Secure checkout · Instant delivery · [X]-day guarantee</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-gray-900 text-gray-400 text-sm py-8 px-4 text-center">
+    <p>© 2026 [Company Name]. All rights reserved.</p>
+    <p class="mt-1">
+      <a href="#" class="hover:text-white underline mx-2">Privacy Policy</a>
+      <a href="#" class="hover:text-white underline mx-2">Terms of Service</a>
+      <a href="#" class="hover:text-white underline mx-2">Refund Policy</a>
+      <a href="#" class="hover:text-white underline mx-2">Contact</a>
+    </p>
+    <p class="mt-4 text-xs text-gray-600 max-w-2xl mx-auto">
+      Results shown on this page are not typical. Individual results will vary based on effort, experience, and market conditions. This page does not constitute financial, legal, or professional advice.
+    </p>
+  </footer>
+
+  <!-- ===== FAQ ACCORDION SCRIPT ===== -->
+  <script>
+    document.querySelectorAll('.faq-trigger').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        // Open clicked if it was closed
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
