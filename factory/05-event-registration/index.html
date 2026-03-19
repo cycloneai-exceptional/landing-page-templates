@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[EVENT NAME] — Register Now</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // ============================================================
+    // BRAND COLORS — change these to match the client / event
+    // ============================================================
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#4f46e5',       // Indigo — professional events
+            branddark: '#4338ca',
+            brandlight: '#eef2ff',
+          },
+          fontFamily: {
+            display: ['Sora', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3 { font-family: 'Sora', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- ============================================================
+    SECTION 1 — EVENT DETAILS
+    Fill in: Event name, date, location, headline
+  ============================================================ -->
+  <section class="bg-[#1e1b4b] text-white py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+
+      <!-- Event badge -->
+      <div class="inline-flex items-center gap-2 bg-indigo-600 text-indigo-200 text-xs font-bold px-4 py-2 rounded-full mb-6 uppercase tracking-wide">
+        📅 [EVENT TYPE — e.g. "Live Conference" / "Virtual Summit" / "Workshop"]
+      </div>
+
+      <h1 class="font-display text-4xl md:text-5xl font-extrabold leading-tight mb-5">
+        [EVENT NAME]
+      </h1>
+      <p class="text-indigo-200 text-xl leading-relaxed mb-8 max-w-2xl mx-auto">
+        [EVENT TAGLINE — One sentence. Who it's for + what they'll get out of attending.]
+      </p>
+
+      <!-- Event details row -->
+      <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-10 text-sm">
+        <div class="flex items-center gap-2 bg-white/10 border border-white/20 rounded-xl px-4 py-3">
+          <svg class="w-5 h-5 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <span><strong>[DATE — e.g. April 25, 2026]</strong></span>
+        </div>
+        <div class="flex items-center gap-2 bg-white/10 border border-white/20 rounded-xl px-4 py-3">
+          <svg class="w-5 h-5 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span><strong>[TIME + TIMEZONE — e.g. 9:00 AM – 5:00 PM EST]</strong></span>
+        </div>
+        <div class="flex items-center gap-2 bg-white/10 border border-white/20 rounded-xl px-4 py-3">
+          <svg class="w-5 h-5 text-indigo-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <span><strong>[LOCATION — e.g. "Dallas, TX" or "Online via Zoom"]</strong></span>
+        </div>
+      </div>
+
+      <a href="#register" class="inline-block bg-[#4f46e5] hover:bg-[#4338ca] text-white font-bold text-xl px-10 py-5 rounded-2xl shadow-xl transition-all duration-200 hover:-translate-y-0.5">
+        Register Now →
+      </a>
+      <p class="text-indigo-300 text-sm mt-4">[SCARCITY LINE — e.g. "Only 150 seats available. [X] already claimed."]</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    SECTION 2 — SPEAKER HIGHLIGHTS
+    Fill in: 2–4 speakers with names, titles, headshots
+  ============================================================ -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-[#4f46e5] font-semibold uppercase tracking-widest text-sm text-center mb-3">Featured Speakers</p>
+      <h2 class="font-display text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">
+        Learn From the Best in [INDUSTRY]
+      </h2>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+
+        <!-- Speaker card (repeat for each speaker) -->
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-24 rounded-2xl bg-gray-200 mb-3 flex items-center justify-center text-gray-400 text-xs text-center leading-tight p-2">
+            <!-- Replace with: <img src="speaker1.jpg" class="w-24 h-24 rounded-2xl object-cover" alt="[SPEAKER NAME]"> -->
+            Photo
+          </div>
+          <p class="font-bold text-gray-900 text-sm">[SPEAKER NAME]</p>
+          <p class="text-[#4f46e5] text-xs font-medium mt-0.5">[TITLE / COMPANY]</p>
+          <p class="text-gray-500 text-xs mt-1 leading-relaxed">[ONE LINE — their claim to fame or what they'll speak about]</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-24 rounded-2xl bg-gray-200 mb-3 flex items-center justify-center text-gray-400 text-xs text-center leading-tight p-2">
+            Photo
+          </div>
+          <p class="font-bold text-gray-900 text-sm">[SPEAKER NAME]</p>
+          <p class="text-[#4f46e5] text-xs font-medium mt-0.5">[TITLE / COMPANY]</p>
+          <p class="text-gray-500 text-xs mt-1 leading-relaxed">[ONE LINE]</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-24 rounded-2xl bg-gray-200 mb-3 flex items-center justify-center text-gray-400 text-xs text-center leading-tight p-2">
+            Photo
+          </div>
+          <p class="font-bold text-gray-900 text-sm">[SPEAKER NAME]</p>
+          <p class="text-[#4f46e5] text-xs font-medium mt-0.5">[TITLE / COMPANY]</p>
+          <p class="text-gray-500 text-xs mt-1 leading-relaxed">[ONE LINE]</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-24 rounded-2xl bg-gray-200 mb-3 flex items-center justify-center text-gray-400 text-xs text-center leading-tight p-2">
+            Photo
+          </div>
+          <p class="font-bold text-gray-900 text-sm">[SPEAKER NAME]</p>
+          <p class="text-[#4f46e5] text-xs font-medium mt-0.5">[TITLE / COMPANY]</p>
+          <p class="text-gray-500 text-xs mt-1 leading-relaxed">[ONE LINE]</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    SECTION 3 — AGENDA
+    Fill in: Schedule / agenda items
+  ============================================================ -->
+  <section class="py-16 px-4 bg-indigo-50">
+    <div class="max-w-2xl mx-auto">
+      <p class="text-[#4f46e5] font-semibold uppercase tracking-widest text-sm text-center mb-3">Schedule</p>
+      <h2 class="font-display text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">
+        What to Expect
+      </h2>
+
+      <div class="space-y-4">
+
+        <!-- Agenda item (repeat as needed) -->
+        <div class="flex gap-4 bg-white rounded-xl p-5 shadow-sm border border-indigo-100">
+          <div class="flex-shrink-0 text-right w-20">
+            <p class="text-[#4f46e5] font-bold text-sm">[TIME]</p>
+          </div>
+          <div class="w-px bg-indigo-200 flex-shrink-0"></div>
+          <div>
+            <p class="font-bold text-gray-900 mb-0.5">[SESSION TITLE]</p>
+            <p class="text-gray-500 text-sm">[Speaker name or brief description]</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-white rounded-xl p-5 shadow-sm border border-indigo-100">
+          <div class="flex-shrink-0 text-right w-20">
+            <p class="text-[#4f46e5] font-bold text-sm">[TIME]</p>
+          </div>
+          <div class="w-px bg-indigo-200 flex-shrink-0"></div>
+          <div>
+            <p class="font-bold text-gray-900 mb-0.5">[SESSION TITLE]</p>
+            <p class="text-gray-500 text-sm">[Speaker name or brief description]</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-white rounded-xl p-5 shadow-sm border border-indigo-100">
+          <div class="flex-shrink-0 text-right w-20">
+            <p class="text-[#4f46e5] font-bold text-sm">[TIME]</p>
+          </div>
+          <div class="w-px bg-indigo-200 flex-shrink-0"></div>
+          <div>
+            <p class="font-bold text-gray-900 mb-0.5">[SESSION TITLE]</p>
+            <p class="text-gray-500 text-sm">[Speaker name or brief description]</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-white rounded-xl p-5 shadow-sm border border-indigo-100">
+          <div class="flex-shrink-0 text-right w-20">
+            <p class="text-[#4f46e5] font-bold text-sm">[TIME]</p>
+          </div>
+          <div class="w-px bg-indigo-200 flex-shrink-0"></div>
+          <div>
+            <p class="font-bold text-gray-900 mb-0.5">[SESSION TITLE]</p>
+            <p class="text-gray-500 text-sm">[Speaker name or brief description]</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 bg-white rounded-xl p-5 shadow-sm border border-indigo-100">
+          <div class="flex-shrink-0 text-right w-20">
+            <p class="text-[#4f46e5] font-bold text-sm">[TIME]</p>
+          </div>
+          <div class="w-px bg-indigo-200 flex-shrink-0"></div>
+          <div>
+            <p class="font-bold text-gray-900 mb-0.5">[SESSION TITLE]</p>
+            <p class="text-gray-500 text-sm">[Speaker name or brief description]</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    SECTION 4 — REGISTRATION FORM
+    Fill in: Ticket price (or free), form action, fields
+  ============================================================ -->
+  <section id="register" class="py-20 px-4 bg-[#1e1b4b] text-white">
+    <div class="max-w-xl mx-auto">
+      <p class="text-indigo-400 font-semibold uppercase tracking-widest text-sm text-center mb-3">Secure Your Spot</p>
+      <h2 class="font-display text-3xl font-bold text-center mb-2">Register for [EVENT NAME]</h2>
+      <p class="text-indigo-300 text-center mb-8">
+        [DATE] · [LOCATION] &nbsp;|&nbsp;
+        <!-- Show ticket price or "Free to Attend" -->
+        <strong class="text-white">[PRICE or "Free to Attend"]</strong>
+      </p>
+
+      <div class="bg-white text-gray-900 rounded-2xl p-8 shadow-2xl">
+        <!-- Replace action="#" with your form/ticketing endpoint -->
+        <form action="#" method="post" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+            <input type="text" name="first_name" placeholder="Jane" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4f46e5] transition" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+            <input type="text" name="last_name" placeholder="Smith" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4f46e5] transition" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Work Email</label>
+            <input type="email" name="email" placeholder="jane@company.com" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4f46e5] transition" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Company / Organization</label>
+            <input type="text" name="company" placeholder="Acme Inc."
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4f46e5] transition" />
+          </div>
+          <!-- Optional: Ticket type selection
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Ticket Type</label>
+            <select name="ticket_type" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4f46e5] transition">
+              <option>General Admission — $[PRICE]</option>
+              <option>VIP Access — $[PRICE]</option>
+              <option>Virtual Only — $[PRICE]</option>
+            </select>
+          </div>
+          -->
+          <button type="submit"
+            class="w-full bg-[#4f46e5] hover:bg-[#4338ca] text-white font-bold text-lg py-4 rounded-xl transition shadow-md">
+            Reserve My Spot →
+          </button>
+          <p class="text-center text-xs text-gray-400">🔒 Your info is secure. You'll receive a confirmation email immediately.</p>
+        </form>
+      </div>
+
+      <!-- Remaining spots / urgency -->
+      <p class="text-center text-indigo-400 text-sm mt-6">
+        ⚡ [X] spots remaining out of [TOTAL]. Registration closes [DATE].
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-500 text-xs py-6 px-4 text-center">
+    <p>© 2026 [COMPANY / ORGANIZER NAME]. All rights reserved.</p>
+    <p class="mt-1">
+      <a href="#" class="hover:text-white underline mx-2">Privacy Policy</a>
+      <a href="#" class="hover:text-white underline mx-2">Refund Policy</a>
+      <a href="#" class="hover:text-white underline mx-2">Contact Organizer</a>
+    </p>
+  </footer>
+
+</body>
+</html>

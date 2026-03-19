@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[HEADLINE] — [COMPANY NAME]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // ============================================================
+    // BRAND COLORS — change these to match the client
+    // ============================================================
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand:  '#2563eb',   // Primary (buttons, accents)
+            branddark: '#1d4ed8', // Hover state
+            brandlight: '#eff6ff', // Background tint
+          },
+          fontFamily: {
+            display: ['Sora', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3 { font-family: 'Sora', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- ============================================================
+    SECTION 1 — HERO
+    Fill in: Headline, subheadline, offer name
+  ============================================================ -->
+  <section class="bg-[#1e3a5f] text-white py-20 px-4">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-blue-300 text-sm font-semibold uppercase tracking-widest mb-4">[EYEBROW TEXT — e.g. "Free Consultation" or "Limited Offer"]</p>
+      <h1 class="font-display text-4xl md:text-5xl font-extrabold leading-tight mb-5">
+        [MAIN HEADLINE — What they get + why it matters]
+      </h1>
+      <p class="text-blue-200 text-lg md:text-xl leading-relaxed mb-8">
+        [SUBHEADLINE — One sentence. Who it's for + what they'll get. Keep it under 20 words.]
+      </p>
+      <a href="#form" class="inline-block bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg transition-all duration-200">
+        [CTA BUTTON TEXT — e.g. "Get My Free Quote"] →
+      </a>
+      <p class="text-blue-300 text-xs mt-4">[MICRO-COPY — e.g. "No credit card required. Takes 60 seconds."]</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    SECTION 2 — VALUE PROPOSITION
+    Fill in: 3 key reasons why this company / offer
+  ============================================================ -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-display text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">
+        [VALUE PROP HEADLINE — e.g. "Why Hundreds of [City] Homeowners Choose Us"]
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div class="p-6">
+          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-[#2563eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-2">[VALUE POINT 1 TITLE]</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">[One sentence description of this value point.]</p>
+        </div>
+        <div class="p-6">
+          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-[#2563eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-2">[VALUE POINT 2 TITLE]</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">[One sentence description of this value point.]</p>
+        </div>
+        <div class="p-6">
+          <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <svg class="w-7 h-7 text-[#2563eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-2">[VALUE POINT 3 TITLE]</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">[One sentence description of this value point.]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    SECTION 3 — TRUST INDICATORS
+    Fill in: Stats, logos, or awards
+  ============================================================ -->
+  <section class="bg-gray-50 border-y border-gray-200 py-10 px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <p class="font-display text-3xl font-extrabold text-[#2563eb]">[STAT]</p>
+          <p class="text-gray-500 text-sm mt-1">[STAT LABEL — e.g. "Happy Clients"]</p>
+        </div>
+        <div>
+          <p class="font-display text-3xl font-extrabold text-[#2563eb]">[STAT]</p>
+          <p class="text-gray-500 text-sm mt-1">[STAT LABEL]</p>
+        </div>
+        <div>
+          <p class="font-display text-3xl font-extrabold text-[#2563eb]">[STAT]</p>
+          <p class="text-gray-500 text-sm mt-1">[STAT LABEL]</p>
+        </div>
+        <div>
+          <p class="font-display text-3xl font-extrabold text-[#2563eb]">[STAT]</p>
+          <p class="text-gray-500 text-sm mt-1">[STAT LABEL]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    SECTION 4 — OFFER EXPLANATION
+    Fill in: What they get when they fill out the form
+  ============================================================ -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-[#2563eb] font-semibold uppercase tracking-widest text-sm mb-3">What You Get</p>
+      <h2 class="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+        [OFFER HEADLINE — e.g. "Your Free Consultation Includes:"]
+      </h2>
+      <ul class="space-y-3 text-left max-w-md mx-auto mb-8">
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-[#2563eb] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          <span class="text-gray-700">[OFFER ITEM 1 — specific, concrete deliverable]</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-[#2563eb] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          <span class="text-gray-700">[OFFER ITEM 2]</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-[#2563eb] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          <span class="text-gray-700">[OFFER ITEM 3]</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="w-5 h-5 text-[#2563eb] flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+          <span class="text-gray-700">[OFFER ITEM 4]</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    SECTION 5 — FORM
+    Fill in: action URL (your form provider), fields needed
+    Common providers: Mailchimp, ConvertKit, GoHighLevel, Typeform
+  ============================================================ -->
+  <section id="form" class="py-16 px-4 bg-blue-50">
+    <div class="max-w-xl mx-auto">
+      <div class="bg-white rounded-2xl shadow-xl p-8">
+        <h2 class="font-display text-2xl font-bold text-gray-900 text-center mb-2">
+          [FORM HEADLINE — e.g. "Get Your Free Quote"]
+        </h2>
+        <p class="text-gray-500 text-center text-sm mb-6">[FORM SUBTEXT — e.g. "Takes less than 60 seconds."]</p>
+
+        <!-- Replace action="#" with your form provider's endpoint -->
+        <form action="#" method="post" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+            <input type="text" name="full_name" placeholder="Jane Smith" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] transition" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+            <input type="email" name="email" placeholder="jane@example.com" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] transition" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+            <input type="tel" name="phone" placeholder="(555) 000-0000"
+              class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] transition" />
+          </div>
+          <!-- ADD OR REMOVE FIELDS AS NEEDED -->
+          <!-- Example extra field:
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">What service are you interested in?</label>
+            <select name="service" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#2563eb] transition">
+              <option value="">Select one...</option>
+              <option>Option A</option>
+              <option>Option B</option>
+            </select>
+          </div>
+          -->
+          <button type="submit"
+            class="w-full bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-bold text-lg py-4 rounded-xl transition-all duration-200 shadow-md">
+            [CTA BUTTON TEXT] →
+          </button>
+          <p class="text-center text-xs text-gray-400">🔒 [PRIVACY LINE — e.g. "Your info is safe. No spam, ever."]</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    SECTION 6 — FINAL CTA
+  ============================================================ -->
+  <section class="py-12 px-4 bg-[#1e3a5f] text-white text-center">
+    <div class="max-w-xl mx-auto">
+      <h2 class="font-display text-2xl font-bold mb-3">[CLOSING HEADLINE]</h2>
+      <p class="text-blue-200 mb-6">[CLOSING SUBTEXT]</p>
+      <a href="#form" class="inline-block bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-bold px-8 py-4 rounded-xl transition">
+        [CTA BUTTON TEXT] →
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-500 text-xs py-6 px-4 text-center">
+    <p>© 2026 [COMPANY NAME]. All rights reserved.</p>
+    <p class="mt-1">
+      <a href="#" class="hover:text-white underline mx-2">Privacy Policy</a>
+      <a href="#" class="hover:text-white underline mx-2">Terms</a>
+      <a href="#" class="hover:text-white underline mx-2">Contact</a>
+    </p>
+  </footer>
+
+</body>
+</html>

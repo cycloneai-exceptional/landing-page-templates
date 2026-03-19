@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[SERVICE] in [CITY] — [COMPANY NAME]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // ============================================================
+    // BRAND COLORS — change these to match the client
+    // ============================================================
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#16a34a',      // Green — trust, local, reliable
+            branddark: '#15803d',
+            brandlight: '#f0fdf4',
+          },
+          fontFamily: {
+            display: ['Sora', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3 { font-family: 'Sora', sans-serif; }
+    .stars { color: #f59e0b; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Top bar — local trust signal -->
+  <div class="bg-[#16a34a] text-white text-center text-sm py-2 px-4 font-medium">
+    📍 Proudly Serving [CITY], [STATE] and Surrounding Areas &nbsp;·&nbsp; ⭐ [X.X] Stars on Google &nbsp;·&nbsp; 📞 [PHONE NUMBER]
+  </div>
+
+  <!-- ============================================================
+    SECTION 1 — LOCAL TRUST + HERO
+    Fill in: City, service type, headline, phone
+  ============================================================ -->
+  <section class="bg-gray-900 text-white py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-green-400 text-sm font-semibold uppercase tracking-widest mb-4">
+        [CITY]'s Most Trusted [SERVICE TYPE]
+      </p>
+      <h1 class="font-display text-4xl md:text-5xl font-extrabold leading-tight mb-5">
+        [HEADLINE — e.g. "Fast, Reliable [Service] in [City] — Guaranteed"]
+      </h1>
+      <p class="text-gray-300 text-lg leading-relaxed mb-8">
+        [SUBHEADLINE — One sentence. Who you serve, what you do, why they should call today.]
+      </p>
+
+      <!-- Dual CTA: Call + Form -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:[PHONE]"
+          class="inline-flex items-center justify-center gap-2 bg-[#16a34a] hover:bg-[#15803d] text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg transition">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          Call Now: [PHONE]
+        </a>
+        <a href="#form"
+          class="inline-block border-2 border-white text-white hover:bg-white hover:text-gray-900 font-bold text-lg px-8 py-4 rounded-xl transition">
+          Get a Free Quote →
+        </a>
+      </div>
+
+      <!-- Trust badges -->
+      <div class="flex flex-wrap justify-center gap-4 mt-8 text-sm text-gray-400">
+        <span>✅ Licensed & Insured</span>
+        <span>✅ [X]+ Years in Business</span>
+        <span>✅ Same-Day Availability</span>
+        <span>✅ Free Estimates</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    SECTION 2 — PROBLEM
+    Fill in: Pain points your audience faces
+  ============================================================ -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+        [PROBLEM HEADLINE — e.g. "Dealing with [Problem]? You're Not Alone."]
+      </h2>
+      <p class="text-gray-600 text-lg leading-relaxed mb-8">
+        [1–2 sentences describing the pain point your ideal customer is experiencing right now.]
+      </p>
+      <div class="grid sm:grid-cols-2 gap-4 text-left">
+        <div class="flex items-start gap-3 bg-red-50 rounded-xl p-4">
+          <span class="text-red-500 text-lg mt-0.5">✗</span>
+          <span class="text-gray-700 text-sm">[PAIN POINT 1]</span>
+        </div>
+        <div class="flex items-start gap-3 bg-red-50 rounded-xl p-4">
+          <span class="text-red-500 text-lg mt-0.5">✗</span>
+          <span class="text-gray-700 text-sm">[PAIN POINT 2]</span>
+        </div>
+        <div class="flex items-start gap-3 bg-red-50 rounded-xl p-4">
+          <span class="text-red-500 text-lg mt-0.5">✗</span>
+          <span class="text-gray-700 text-sm">[PAIN POINT 3]</span>
+        </div>
+        <div class="flex items-start gap-3 bg-red-50 rounded-xl p-4">
+          <span class="text-red-500 text-lg mt-0.5">✗</span>
+          <span class="text-gray-700 text-sm">[PAIN POINT 4]</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    SECTION 3 — SOLUTION
+    Fill in: What you do and how it solves the problem
+  ============================================================ -->
+  <section class="py-16 px-4 bg-green-50">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-10">
+        <p class="text-[#16a34a] font-semibold uppercase tracking-widest text-sm mb-3">The Solution</p>
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+          [SOLUTION HEADLINE — e.g. "Why [Company] Is [City]'s Go-To [Service]"]
+        </h2>
+        <p class="text-gray-600 leading-relaxed">
+          [2–3 sentences explaining your process, what makes you different, and the outcome the customer gets.]
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6 text-center">
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+          <div class="w-12 h-12 bg-[#16a34a] rounded-xl flex items-center justify-center mx-auto mb-3">
+            <span class="text-white font-display font-bold text-lg">1</span>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">[STEP 1 TITLE]</h3>
+          <p class="text-gray-500 text-sm">[Brief description of this step in your process]</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+          <div class="w-12 h-12 bg-[#16a34a] rounded-xl flex items-center justify-center mx-auto mb-3">
+            <span class="text-white font-display font-bold text-lg">2</span>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">[STEP 2 TITLE]</h3>
+          <p class="text-gray-500 text-sm">[Brief description of this step in your process]</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm">
+          <div class="w-12 h-12 bg-[#16a34a] rounded-xl flex items-center justify-center mx-auto mb-3">
+            <span class="text-white font-display font-bold text-lg">3</span>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2">[STEP 3 TITLE]</h3>
+          <p class="text-gray-500 text-sm">[Brief description of this step in your process]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    SECTION 4 — REVIEWS
+    Fill in: 3 real customer reviews with names
+  ============================================================ -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-[#16a34a] font-semibold uppercase tracking-widest text-sm text-center mb-3">Real Reviews</p>
+      <h2 class="font-display text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">
+        What [CITY] Customers Are Saying
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+          <div class="stars text-lg mb-3">★★★★★</div>
+          <blockquote class="text-gray-700 text-sm leading-relaxed mb-4">
+            "[REVIEW TEXT — Pull directly from Google or Facebook. Use the customer's exact words.]"
+          </blockquote>
+          <div class="flex items-center gap-3 border-t border-gray-200 pt-4">
+            <div class="w-9 h-9 rounded-full bg-gray-300 flex-shrink-0 flex items-center justify-center text-xs font-bold text-gray-600">
+              [INITIALS]
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">[CUSTOMER NAME]</p>
+              <p class="text-gray-400 text-xs">via Google Reviews</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+          <div class="stars text-lg mb-3">★★★★★</div>
+          <blockquote class="text-gray-700 text-sm leading-relaxed mb-4">
+            "[REVIEW TEXT — Use a review that mentions a specific result or mentions the city/service.]"
+          </blockquote>
+          <div class="flex items-center gap-3 border-t border-gray-200 pt-4">
+            <div class="w-9 h-9 rounded-full bg-gray-300 flex-shrink-0 flex items-center justify-center text-xs font-bold text-gray-600">
+              [INITIALS]
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">[CUSTOMER NAME]</p>
+              <p class="text-gray-400 text-xs">via Google Reviews</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+          <div class="stars text-lg mb-3">★★★★★</div>
+          <blockquote class="text-gray-700 text-sm leading-relaxed mb-4">
+            "[REVIEW TEXT — Pick one that overcomes a common objection like price or response time.]"
+          </blockquote>
+          <div class="flex items-center gap-3 border-t border-gray-200 pt-4">
+            <div class="w-9 h-9 rounded-full bg-gray-300 flex-shrink-0 flex items-center justify-center text-xs font-bold text-gray-600">
+              [INITIALS]
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">[CUSTOMER NAME]</p>
+              <p class="text-gray-400 text-xs">via Google Reviews</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Google rating summary -->
+      <div class="mt-8 text-center">
+        <p class="text-gray-500 text-sm">
+          ⭐ Rated <strong class="text-gray-900">[X.X] / 5.0</strong> from <strong class="text-gray-900">[X]+ reviews</strong> on Google
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    SECTION 5 — CTA / FORM
+    Fill in: form action, fields, phone number
+  ============================================================ -->
+  <section id="form" class="py-20 px-4 bg-gray-900 text-white">
+    <div class="max-w-3xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <!-- Left: pitch -->
+        <div>
+          <p class="text-green-400 font-semibold uppercase tracking-widest text-sm mb-3">Get Started Today</p>
+          <h2 class="font-display text-3xl font-bold mb-4">
+            [CTA HEADLINE — e.g. "Get Your Free Estimate in 24 Hours"]
+          </h2>
+          <p class="text-gray-400 mb-6">[CTA SUBTEXT — What happens after they submit. Be specific.]</p>
+          <div class="space-y-2 text-sm text-gray-300">
+            <p>✅ [Trust point 1 — e.g. "Same-day response guaranteed"]</p>
+            <p>✅ [Trust point 2 — e.g. "No obligation, completely free"]</p>
+            <p>✅ [Trust point 3 — e.g. "Licensed and insured team"]</p>
+          </div>
+          <div class="mt-6">
+            <p class="text-gray-400 text-sm mb-1">Prefer to call?</p>
+            <a href="tel:[PHONE]" class="text-green-400 font-bold text-xl hover:text-green-300 transition">
+              📞 [PHONE NUMBER]
+            </a>
+          </div>
+        </div>
+        <!-- Right: form -->
+        <div class="bg-white text-gray-900 rounded-2xl p-6 shadow-2xl">
+          <p class="font-bold text-gray-900 text-lg text-center mb-5">Request a Free Quote</p>
+          <!-- Replace action="#" with your form provider endpoint -->
+          <form action="#" method="post" class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+              <input type="text" name="full_name" placeholder="Jane Smith" required
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#16a34a] transition" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+              <input type="tel" name="phone" placeholder="(555) 000-0000" required
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#16a34a] transition" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Your Zip Code</label>
+              <input type="text" name="zip" placeholder="[ZIP CODE]"
+                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#16a34a] transition" />
+            </div>
+            <!-- OPTIONAL: service dropdown
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-1">Service Needed</label>
+              <select name="service" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#16a34a] transition">
+                <option value="">Select a service...</option>
+                <option>[SERVICE A]</option>
+                <option>[SERVICE B]</option>
+                <option>[SERVICE C]</option>
+              </select>
+            </div>
+            -->
+            <button type="submit"
+              class="w-full bg-[#16a34a] hover:bg-[#15803d] text-white font-bold text-lg py-4 rounded-xl transition shadow-md">
+              Get My Free Quote →
+            </button>
+            <p class="text-center text-xs text-gray-400">🔒 We never share your info. No spam calls.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-500 text-xs py-6 px-4 text-center">
+    <p>© 2026 [COMPANY NAME] · [CITY], [STATE] · [PHONE]</p>
+    <p class="mt-1">
+      <a href="#" class="hover:text-white underline mx-2">Privacy Policy</a>
+      <a href="#" class="hover:text-white underline mx-2">Terms</a>
+      <a href="#" class="hover:text-white underline mx-2">Service Areas</a>
+    </p>
+  </footer>
+
+</body>
+</html>

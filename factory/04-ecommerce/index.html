@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[PRODUCT NAME] — [COMPANY NAME]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // ============================================================
+    // BRAND COLORS — change these to match the client
+    // ============================================================
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#7c3aed',      // Purple — premium ecommerce
+            branddark: '#6d28d9',
+            brandlight: '#f5f3ff',
+          },
+          fontFamily: {
+            display: ['Sora', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3 { font-family: 'Sora', sans-serif; }
+    .stars { color: #f59e0b; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- Announcement bar -->
+  <div class="bg-[#7c3aed] text-white text-center text-sm py-2 px-4 font-medium">
+    🚚 [OFFER — e.g. "Free Shipping on Orders Over $50"] &nbsp;·&nbsp; <a href="#buy" class="underline font-bold">Shop Now</a>
+  </div>
+
+  <!-- ============================================================
+    SECTION 1 — HERO
+    Fill in: Product name, benefit headline, image
+  ============================================================ -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+
+        <!-- Product image -->
+        <div class="bg-gray-100 rounded-2xl aspect-square flex items-center justify-center text-gray-400 text-sm text-center p-8 border border-gray-200">
+          <!-- Replace with: <img src="product.jpg" class="rounded-2xl object-cover w-full h-full" alt="[PRODUCT NAME]"> -->
+          Product Image<br/>(Replace this block with your image)
+        </div>
+
+        <!-- Product info -->
+        <div>
+          <p class="text-[#7c3aed] text-sm font-semibold uppercase tracking-widest mb-2">[PRODUCT CATEGORY]</p>
+          <h1 class="font-display text-3xl md:text-4xl font-extrabold leading-tight mb-3">
+            [PRODUCT NAME]
+          </h1>
+          <p class="text-gray-500 text-lg leading-relaxed mb-4">
+            [PRODUCT BENEFIT HEADLINE — One sentence. What it does for the customer, not what it is.]
+          </p>
+
+          <!-- Rating -->
+          <div class="flex items-center gap-2 mb-5">
+            <span class="stars">★★★★★</span>
+            <span class="text-sm text-gray-500"><strong class="text-gray-900">[X.X]</strong> ([X]+ reviews)</span>
+          </div>
+
+          <!-- Price -->
+          <div class="flex items-center gap-3 mb-6">
+            <span class="text-3xl font-display font-extrabold text-gray-900">[PRICE — e.g. $49.99]</span>
+            <!-- Strike-through only if on sale: -->
+            <span class="text-gray-400 line-through text-xl">[ORIGINAL PRICE]</span>
+            <span class="bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded-full">[SAVINGS — e.g. Save 25%]</span>
+          </div>
+
+          <!-- Options (color, size, etc.) — remove if not needed -->
+          <div class="mb-5">
+            <p class="text-sm font-medium text-gray-700 mb-2">[OPTION LABEL — e.g. "Size" or "Color"]</p>
+            <div class="flex flex-wrap gap-2">
+              <button class="border-2 border-[#7c3aed] text-[#7c3aed] text-sm font-semibold px-4 py-2 rounded-lg">[OPTION A]</button>
+              <button class="border border-gray-300 text-gray-700 text-sm font-semibold px-4 py-2 rounded-lg hover:border-[#7c3aed] transition">[OPTION B]</button>
+              <button class="border border-gray-300 text-gray-700 text-sm font-semibold px-4 py-2 rounded-lg hover:border-[#7c3aed] transition">[OPTION C]</button>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <!-- Replace href with your cart/checkout link -->
+          <a href="#" id="buy"
+            class="block text-center bg-[#7c3aed] hover:bg-[#6d28d9] text-white font-bold text-lg py-4 rounded-xl shadow-lg transition-all duration-200 mb-3">
+            Add to Cart →
+          </a>
+          <a href="#"
+            class="block text-center border-2 border-gray-300 text-gray-700 hover:border-[#7c3aed] font-bold py-3 rounded-xl transition mb-4">
+            Buy Now — [PRICE]
+          </a>
+
+          <!-- Trust micro-signals -->
+          <div class="flex flex-wrap gap-3 text-xs text-gray-500">
+            <span>🔒 Secure Checkout</span>
+            <span>🚚 Free Shipping over $[X]</span>
+            <span>↩ [X]-Day Returns</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    SECTION 2 — PRODUCT BENEFIT (THE WHY)
+    Fill in: Main transformation / outcome of using this product
+  ============================================================ -->
+  <section class="py-16 px-4 bg-purple-50">
+    <div class="max-w-2xl mx-auto text-center">
+      <p class="text-[#7c3aed] font-semibold uppercase tracking-widest text-sm mb-3">Why [PRODUCT NAME]</p>
+      <h2 class="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-5">
+        [BENEFIT HEADLINE — e.g. "Finally, a [Product Type] That Actually [Does What It Claims]"]
+      </h2>
+      <p class="text-gray-600 text-lg leading-relaxed">
+        [2–3 sentences. Describe the problem first, then position the product as the solution. Speak to the customer's frustration.]
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    SECTION 3 — FEATURE BREAKDOWN
+    Fill in: 4–6 key features with benefits
+  ============================================================ -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="font-display text-2xl md:text-3xl font-bold text-center text-gray-900 mb-10">
+        What Makes [PRODUCT NAME] Different
+      </h2>
+      <div class="grid sm:grid-cols-2 gap-6">
+
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-[#7c3aed]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <p class="font-bold text-gray-900 mb-1">[FEATURE 1 NAME]</p>
+            <p class="text-gray-500 text-sm leading-relaxed">[What this feature does and why it matters to the customer]</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-[#7c3aed]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <p class="font-bold text-gray-900 mb-1">[FEATURE 2 NAME]</p>
+            <p class="text-gray-500 text-sm leading-relaxed">[What this feature does and why it matters to the customer]</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-[#7c3aed]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <p class="font-bold text-gray-900 mb-1">[FEATURE 3 NAME]</p>
+            <p class="text-gray-500 text-sm leading-relaxed">[What this feature does and why it matters to the customer]</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-[#7c3aed]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div>
+            <p class="font-bold text-gray-900 mb-1">[FEATURE 4 NAME]</p>
+            <p class="text-gray-500 text-sm leading-relaxed">[What this feature does and why it matters to the customer]</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    SECTION 4 — SOCIAL PROOF
+    Fill in: 3 customer reviews
+  ============================================================ -->
+  <section class="py-16 px-4 bg-gray-50 border-t border-gray-200">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-[#7c3aed] font-semibold uppercase tracking-widest text-sm text-center mb-3">Customer Reviews</p>
+      <h2 class="font-display text-2xl font-bold text-center text-gray-900 mb-2">
+        <span class="stars">★★★★★</span> [X.X] out of 5
+      </h2>
+      <p class="text-center text-gray-500 text-sm mb-10">Based on [X]+ verified reviews</p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+          <div class="stars text-sm mb-2">★★★★★</div>
+          <p class="font-bold text-gray-900 text-sm mb-2">"[REVIEW TITLE — short headline of their experience]"</p>
+          <blockquote class="text-gray-600 text-sm leading-relaxed mb-4">
+            "[REVIEW BODY — Verified purchaser quote. Mention the product name if possible.]"
+          </blockquote>
+          <p class="text-gray-400 text-xs">— [CUSTOMER NAME] · ✅ Verified Purchase</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+          <div class="stars text-sm mb-2">★★★★★</div>
+          <p class="font-bold text-gray-900 text-sm mb-2">"[REVIEW TITLE]"</p>
+          <blockquote class="text-gray-600 text-sm leading-relaxed mb-4">
+            "[REVIEW BODY — Focus on a specific result or outcome the customer got.]"
+          </blockquote>
+          <p class="text-gray-400 text-xs">— [CUSTOMER NAME] · ✅ Verified Purchase</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+          <div class="stars text-sm mb-2">★★★★★</div>
+          <p class="font-bold text-gray-900 text-sm mb-2">"[REVIEW TITLE]"</p>
+          <blockquote class="text-gray-600 text-sm leading-relaxed mb-4">
+            "[REVIEW BODY — Use one that handles an objection, like skepticism about the price or whether it really works.]"
+          </blockquote>
+          <p class="text-gray-400 text-xs">— [CUSTOMER NAME] · ✅ Verified Purchase</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+    SECTION 5 — FINAL CTA
+  ============================================================ -->
+  <section class="py-16 px-4 bg-[#7c3aed] text-white text-center">
+    <div class="max-w-xl mx-auto">
+      <h2 class="font-display text-3xl font-bold mb-4">[FINAL CTA HEADLINE]</h2>
+      <p class="text-purple-200 text-lg mb-8">[SUBTEXT — Reinforce value or urgency]</p>
+      <a href="#buy"
+        class="inline-block bg-white text-[#7c3aed] hover:bg-purple-50 font-bold text-xl px-10 py-5 rounded-2xl shadow-xl transition">
+        Shop Now — [PRICE] →
+      </a>
+      <p class="text-purple-300 text-xs mt-4">🚚 Free shipping · ↩ [X]-day returns · 🔒 Secure checkout</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-500 text-xs py-6 px-4 text-center">
+    <p>© 2026 [COMPANY NAME]. All rights reserved.</p>
+    <p class="mt-1">
+      <a href="#" class="hover:text-white underline mx-2">Privacy Policy</a>
+      <a href="#" class="hover:text-white underline mx-2">Terms</a>
+      <a href="#" class="hover:text-white underline mx-2">Shipping & Returns</a>
+      <a href="#" class="hover:text-white underline mx-2">Contact</a>
+    </p>
+  </footer>
+
+</body>
+</html>
